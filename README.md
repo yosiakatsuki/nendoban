@@ -6,6 +6,10 @@ Bootstrap 4ベースで特に機能的なものは入っていない使いやす
 
 ## Third-party resources
 
+### jQuery
+- License : MIT License
+- Source  : https://jquery.org/license/
+
 ### Bootstrap 4
 - License : MIT License
 - Source  : https://github.com/twbs/bootstrap

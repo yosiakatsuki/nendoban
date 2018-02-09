@@ -45,19 +45,22 @@
 					</div><!-- .site-branding -->
 				</div><!-- .col -->
 
-				<div class="col">
-					<nav id="site-navigation" class="main-navigation navbar navbar-expand-lg navbar-light h-100 flex align-items-center">
-						<button class="menu-toggle navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="<?php esc_html_e( 'Primary Menu', 'nendoban' ); ?>"><i class="fas fa-bars"></i></button>
-						<?php
-							wp_nav_menu( array(
-								'theme_location' => 'menu-1',
-								'menu_id'        => 'navbarNav',
-								'menu_class'        => 'navbar-nav',
-								'container_class' => 'collapse navbar-collapse'
-							) );
-						?>
-					</nav><!-- #site-navigation -->
-				</div><!-- .col -->
+				<?php if( has_nav_menu( 'menu-1' ) ): ?>
+					<div class="col">
+						<nav id="site-navigation" class="main-navigation navbar navbar-expand-lg navbar-light h-100 flex align-items-center">
+							<button class="menu-toggle navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="<?php esc_html_e( 'Primary Menu', 'nendoban' ); ?>"><i class="fas fa-bars"></i></button>
+							<?php
+								wp_nav_menu( array(
+									'theme_location'  => 'menu-1',
+									'menu_class'      => 'navbar-nav',
+									'container_class'  => 'collapse navbar-collapse',
+									'container_id'  => 'navbarNav',
+									'fallback_cb' => ''
+								) );
+							?>
+						</nav><!-- #site-navigation -->
+					</div><!-- .col -->
+				<?php endif; ?>
 
 			</div><!-- .row -->
 		</div><!-- .container -->
