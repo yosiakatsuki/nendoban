@@ -23,7 +23,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'nendoban' ); ?></a>
 	<header id="masthead" class="site-header fixed-top box-shadow py-2">
 		<div class="container">
-			<div class="row align-items-cente">
+			<div class="row align-items-center">
 				<div class="col">
 					<div class="site-branding">
 						<?php
@@ -44,7 +44,7 @@
 				</div><!-- .col -->
 				<?php if( has_nav_menu( 'Primary' ) ): ?>
 					<div class="col-auto">
-						<nav id="site-navigation" class="header-nav main-navigation navbar navbar-expand-lg navbar-light h-100 flex align-items-center">
+						<nav id="site-navigation" class="header-nav main-navigation navbar navbar-expand-lg navbar-light h-100 d-flex align-items-center">
 							<button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="<?php esc_html_e( 'Primary Menu', 'nendoban' ); ?>"><i class="fas fa-bars"></i></button>
 							<div class="navbar-collapse offcanvas-collapse">
 								<?php
