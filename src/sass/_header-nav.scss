@@ -1,0 +1,33 @@
+.header-nav {
+
+  .menu-item {
+    a {
+      display: block;
+      padding: .5rem;
+    }
+  }
+  .sub-menu {
+    margin: 0;
+    padding: 0 0 0 1rem;
+    list-style: none;
+  }
+  @include media-breakpoint-up(lg) {
+    .sub-menu {
+      display: none;
+      width: 200%;
+      position: absolute;
+      top: 100%;
+      margin: 0 auto;
+      padding: .5rem 0 0;
+      background-color: $header-bg-color;
+    }
+    .menu-item-has-children {
+      position: relative;
+      &:hover {
+        .sub-menu {
+          display: block;
+        }
+      }
+    }
+  }
+}

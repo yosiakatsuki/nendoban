@@ -21,50 +21,45 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'nendoban' ); ?></a>
-
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="site-header fixed-top box-shadow py-2">
 		<div class="container">
 			<div class="row align-items-cente">
-
 				<div class="col">
 					<div class="site-branding">
 						<?php
 						the_custom_logo();
 						if ( is_front_page() && is_home() ) : ?>
-							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+							<h1 class="site-title h3 m-0 py-0"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 						<?php else : ?>
-							<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+							<p class="site-title h3 m-0 py-0"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 						<?php
 						endif;
 
 						$description = get_bloginfo( 'description', 'display' );
 						if ( $description || is_customize_preview() ) : ?>
-							<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+							<p class="site-description text-muted m-0"><small><?php echo $description; /* WPCS: xss ok. */ ?></small></p>
 						<?php
 						endif; ?>
 					</div><!-- .site-branding -->
 				</div><!-- .col -->
-
-				<?php if( has_nav_menu( 'menu-1' ) ): ?>
-					<div class="col">
-						<nav id="site-navigation" class="main-navigation navbar navbar-expand-lg navbar-light h-100 flex align-items-center">
-							<button class="menu-toggle navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="<?php esc_html_e( 'Primary Menu', 'nendoban' ); ?>"><i class="fas fa-bars"></i></button>
-							<?php
-								wp_nav_menu( array(
-									'theme_location'  => 'menu-1',
-									'menu_class'      => 'navbar-nav',
-									'container_class'  => 'collapse navbar-collapse',
-									'container_id'  => 'navbarNav',
-									'fallback_cb' => ''
-								) );
-							?>
+				<?php if( has_nav_menu( 'Primary' ) ): ?>
+					<div class="col-auto">
+						<nav id="site-navigation" class="header-nav main-navigation navbar navbar-expand-lg navbar-light h-100 flex align-items-center">
+							<button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="<?php esc_html_e( 'Primary Menu', 'nendoban' ); ?>"><i class="fas fa-bars"></i></button>
+							<div class="navbar-collapse offcanvas-collapse">
+								<?php
+									wp_nav_menu( array(
+										'theme_location' => 'Primary',
+										'menu_class'     => 'navbar-nav',
+										'fallback_cb'    => '',
+										'container'      => false
+									) );
+								?>
+							</div><!-- .navbar-collapse offcanvas-collapse -->
 						</nav><!-- #site-navigation -->
 					</div><!-- .col -->
 				<?php endif; ?>
-
 			</div><!-- .row -->
 		</div><!-- .container -->
-
 	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+	<div id="content" class="site-content pt-3 pt-lg-5">

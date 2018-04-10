@@ -1,0 +1,59 @@
+$top : 73px;
+$admin-bar : 32px;
+body {
+  padding-top: $top;
+}
+
+body.admin-bar {
+  padding-top: $top;
+  .site-header {
+    top: $admin-bar;
+  }
+}
+
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, .05);
+}
+
+@include media-breakpoint-down(md) {
+  $admin-bar : 46px;
+  #wpadminbar {
+    position: fixed;
+  }
+  body.admin-bar {
+    padding-top: $top;
+    .site-header {
+      top: $admin-bar;
+    }
+    .offcanvas-collapse {
+      top: $top + $admin-bar;
+      height: calc(100% - #{($top + $admin-bar)});
+    }
+  }
+  .navbar-toggler {
+    z-index: 1031;
+  }
+  .offcanvas-collapse {
+    position: fixed;
+    top: $top;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: calc(100% - #{$top});
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    background-color: $header-bg-color;
+    transition: -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    z-index: 1030;
+  }
+  .offcanvas-collapse.open {
+    -webkit-transform: translateX(0);
+    transform: translateX(0); /* Account for horizontal padding on navbar */
+  }
+}

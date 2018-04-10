@@ -5,7 +5,7 @@ module.exports = {
     'theme': './src/js/theme.js'
   },
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].js',
     path: `${__dirname}/js`
   },
   module: {
@@ -29,7 +29,7 @@ module.exports = {
   devtool: 'source-map',
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true
+      sourceMap: false
     })
   ]
 }

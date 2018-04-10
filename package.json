@@ -21,6 +21,6 @@
   },
   "scripts": {
     "gulp": "gulp",
-    "gulp-watch": "gulp watch"
+    "watch": "gulp watch"
   }
 }
