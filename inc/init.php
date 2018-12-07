@@ -53,6 +53,8 @@ if ( ! function_exists( 'nendoban_setup' ) ) :
 		) );
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
+
+		add_theme_support( 'custom-logo' );
 	}
 endif;
 add_action( 'after_setup_theme', 'nendoban_setup' );

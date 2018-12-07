@@ -27,11 +27,14 @@
 				<div class="col">
 					<div class="site-branding">
 						<?php
-						the_custom_logo();
+						$site_logo = get_bloginfo( 'name' );
+						if( has_custom_logo()) {
+							$site_logo = get_custom_logo();
+						}
 						if ( is_front_page() && is_home() ) : ?>
-							<h1 class="site-title h3 m-0 py-0"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+							<h1 class="site-title h3 m-0 py-0"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo $site_logo; ?></a></h1>
 						<?php else : ?>
-							<p class="site-title h3 m-0 py-0"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+							<p class="site-title h3 m-0 py-0"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo $site_logo; ?></a></p>
 						<?php
 						endif;
 
