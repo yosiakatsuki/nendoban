@@ -3,7 +3,9 @@
 @import "../../library/bootstrap-4/scss/functions";
 @import "../../library/bootstrap-4/scss/variables";
 @import "../../library/bootstrap-4/scss/mixins";
-@import "wordpress";
-@import "offcanvas";
-@import "header";
-@import "header-nav";
+@import "wordpress/wordpress";
+@import "nav/offcanvas";
+@import "header/header";
+@import "nav/header-nav";
+@import "footer/footer";
+@import "footer/footer-nav";
