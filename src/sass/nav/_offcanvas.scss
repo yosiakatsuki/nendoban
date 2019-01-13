@@ -44,7 +44,7 @@ body.admin-bar {
     padding-right: 1rem;
     padding-left: 1rem;
     overflow-y: auto;
-    background-color: $header-bg-color;
+    background-color: $color__header-bg;
     transition: -webkit-transform .3s ease-in-out;
     transition: transform .3s ease-in-out;
     transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;

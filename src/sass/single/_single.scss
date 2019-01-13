@@ -1,0 +1,23 @@
+.nav-links {
+  border-top: 1px solid $color__border-gray;
+  border-bottom: 1px solid $color__border-gray;
+  
+  & > *:nth-child(2) {
+    border-top: 1px solid $color__border-gray;
+  }
+  .nav-previous,
+  .nav-next {
+    a {
+      display: block;
+      padding: 1rem;
+      color: $color__text-main;
+    }
+  }
+  .nav-previous {
+    text-align: left;
+  }
+  .nav-next {
+    text-align: right;
+  }
+}
+

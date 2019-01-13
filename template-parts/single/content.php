@@ -1,8 +1,6 @@
 <?php
 /**
- * Template part for displaying posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * 投稿詳細
  *
  * @package nendoban
  */
@@ -11,27 +9,13 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-				nendoban_posted_on();
-				nendoban_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
-
 	<?php nendoban_post_thumbnail(); ?>
-
-	<div class="entry-content">
+	<div class="entry-meta color-text-sub-a mt-1 fs-em-08">
+		<?php nendoban_posted_on(); ?>
+	</div><!-- .entry-meta -->
+	<div class="entry-content mt-3">
 		<?php
 			the_content( sprintf(
 				wp_kses(
@@ -53,7 +37,10 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+	<footer class="entry-footer mt-4">
 		<?php nendoban_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
+<div class="mt-5">
+	<?php the_post_navigation(); ?>	
+</div>

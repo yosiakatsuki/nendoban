@@ -1,0 +1,12 @@
+.archive-post {
+  &.--list {
+    border-bottom: 1px solid $color__border-gray;
+    
+    .archive-post__title {
+      font-size: 1.1rem;
+      @include media-breakpoint-up(md) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

@@ -1,8 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in page.php
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ * 固定ページコンテンツ
  *
  * @package nendoban
  */
@@ -16,7 +14,7 @@
 
 	<?php nendoban_post_thumbnail(); ?>
 
-	<div class="entry-content">
+	<div class="entry-content mt-3">
 		<?php
 			the_content();
 

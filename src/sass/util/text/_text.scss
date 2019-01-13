@@ -1,0 +1,37 @@
+.color-text-main {
+  color: $color__text-main !important;
+  &-a {
+    &,
+    a {
+      color: $color__text-main !important;
+    }
+  }
+}
+.color-text-sub {
+  color: $color__text-sub !important;
+  &-a {
+    &,
+    a {
+      color: $color__text-sub !important;
+    }
+  }
+}
+
+@for $i from 1 through 20 {
+  $size : 10 + $i * 2;
+  .fs-px-#{$size} {
+    font-size:#{$size}px;
+  }
+}
+@for $i from 1 through 5 {
+  $size : 1 + ($i * 0.1 * 2);
+  .fs-em-#{($size * 10)} {
+    font-size:#{$size}em;
+  }
+}
+@for $i from 7 through 9 {
+  $size : ($i * 0.1);
+  .fs-em-0#{$i} {
+    font-size:#{$size}em;
+  }
+}

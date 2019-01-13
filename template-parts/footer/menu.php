@@ -1,5 +1,5 @@
-<?php if ( has_nav_menu( 'Primary' ) ): ?>
-	<div class="footer-menu">
+<?php if ( has_nav_menu( 'Footer' ) ): ?>
+	<div class="footer-menu color-text-sub-a">
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'Footer',

@@ -1,14 +1,16 @@
 <?php
 /**
- * nendoban functions and definitions
- *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ * テーマで使う関数
  *
  * @package nendoban
  */
 /**
-* init
-*/
+ * config
+ */
+require get_template_directory() . '/inc/config.php';
+/**
+ * init
+ */
 require get_template_directory() . '/inc/init.php';
 /**
  * util
