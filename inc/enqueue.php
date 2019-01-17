@@ -20,7 +20,7 @@ function nendoban_scripts() {
 		'bootstrap-style',
 		nendoban_get_library_file_uri( '/bootstrap-4/css/bootstrap.min.css' ),
 		array(),
-		'4.1.0'
+		'4.2.1'
 	);
 	wp_enqueue_style(
 		'base-style',
@@ -52,13 +52,13 @@ function nendoban_scripts() {
 		'bootstrap-script',
 		nendoban_get_library_file_uri( '/bootstrap-4/js/bootstrap.min.js' ),
 		array( 'jquery' ),
-		'4.1.0'
+		'4.2.1'
 	);
 	wp_enqueue_script(
 		'bootstrap-offcanvas',
 		nendoban_get_library_file_uri( '/bootstrap-4/offcanvas/offcanvas.js' ),
 		array( 'jquery' ),
-		'4.1.0'
+		'4.2.1'
 	);
 	wp_enqueue_script(
 		'nendoban-script',
