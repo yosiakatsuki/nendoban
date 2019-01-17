@@ -12,6 +12,7 @@
 function nendoban_setup() {
 
 	load_theme_textdomain( 'nendoban', get_template_directory() . '/languages' );
+
 	add_theme_support( 'automatic-feed-links' );
 
 	add_theme_support( 'title-tag' );
