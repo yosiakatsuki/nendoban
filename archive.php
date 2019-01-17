@@ -25,7 +25,7 @@ get_header(); ?>
 								?>
 							</div>
 						
-							<?php the_posts_navigation(); ?>
+							<?php get_template_part( 'template-parts/archive/pagination' ); ?>
 
 						<?php else : ?>
 

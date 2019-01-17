@@ -15,6 +15,10 @@ function nendoban_register_required_plugins() {
 			'name' => 'Breadcrumb NavXT',
 			'slug' => 'breadcrumb-navxt',
 		),
+		array(
+			'name' => 'WP-PageNavi',
+			'slug' => 'wp-pagenavi',
+		),
 	);
 	$config  = array(
 		'is_automatic' => true,
