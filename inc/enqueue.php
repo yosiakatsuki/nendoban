@@ -30,9 +30,9 @@ function nendoban_scripts() {
 	);
 	wp_enqueue_style(
 		'fontawesome',
-		nendoban_get_library_file_uri( '/fontawesome/css/fontawesome-all.min.css' ),
+		nendoban_get_library_file_uri( '/fontawesome/css/all.min.css' ),
 		array(),
-		'5.0.0'
+		'5.6.3'
 	);
 	wp_enqueue_style(
 		'theme-style',
