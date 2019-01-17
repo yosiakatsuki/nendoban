@@ -9,7 +9,13 @@
  */
 function nendoban_scripts() {
 	$theme = wp_get_theme();
-	$ver = $theme->get('Version');
+	$ver   = $theme->get( 'Version' );
+	/**
+	 * 開発中はキャッシュ対策する
+	 */
+	if ( NDBN_DEV_FLUG ) {
+		$ver = date_i18n( 'His' );
+	}
 	wp_enqueue_style(
 		'bootstrap-style',
 		nendoban_get_library_file_uri( '/bootstrap-4/css/bootstrap.min.css' ),
@@ -35,7 +41,7 @@ function nendoban_scripts() {
 		$ver
 	);
 
-	wp_deregister_script('jquery');
+	wp_deregister_script( 'jquery' );
 	wp_enqueue_script(
 		'jquery',
 		nendoban_get_library_file_uri( '/jquery/jquery.min.js' ),
@@ -66,4 +72,5 @@ function nendoban_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
+
 add_action( 'wp_enqueue_scripts', 'nendoban_scripts' );

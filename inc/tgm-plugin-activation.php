@@ -12,10 +12,6 @@ require_once get_template_directory() . '/library/TGMPA-TGM-Plugin-Activation/cl
 function nendoban_register_required_plugins() {
 	$plugins = array(
 		array(
-			'name' => 'Breadcrumb NavXT',
-			'slug' => 'breadcrumb-navxt',
-		),
-		array(
 			'name' => 'WP-PageNavi',
 			'slug' => 'wp-pagenavi',
 		),

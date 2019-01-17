@@ -4,6 +4,12 @@
  */
 
 /**
+ * 開発中フラグ
+ */
+define( 'NDBN_DEV_FLUG', true );
+
+
+/**
  * サイドバーを使うか
  */
 define( 'NDBN_USE_SIDEBAR', true );
